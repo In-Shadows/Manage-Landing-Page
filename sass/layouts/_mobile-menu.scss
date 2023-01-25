@@ -1,0 +1,73 @@
+.mobile-menu {
+  width: 35rem;
+  height: 0;
+  background-color: $color-very-light-gray;
+  border-radius: 5px;
+  transition: all 0.5s;
+  overflow: hidden;
+
+  position: absolute;
+  top: 100%;
+  right: 5%;
+
+  // box-shadow: 5rem 30rem 100rem rgba(0, 0, 0, 0.5);
+
+  &.active {
+    height: 32rem;
+  }
+
+  &__icon {
+    display: none;
+    align-items: center;
+    border: none;
+    background-color: $color-very-pale-red;
+    cursor: pointer;
+
+    @media only screen and(max-width: $bp-medium) {
+      display: flex;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__navigation__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $color-dark-blue;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-dark-grayish-blue;
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  transition: all 0.5s;
+  z-index: 2;
+
+  &.active {
+    height: 100vh;
+  }
+}

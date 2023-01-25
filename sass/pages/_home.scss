@@ -1,0 +1,354 @@
+.hero-section {
+  @media only screen and (max-width: $bp-medium) {
+    justify-items: center;
+  }
+
+  @media only screen and(max-width: $bp-smaller) {
+    grid-template-columns: 1fr;
+  }
+
+  &__content {
+    padding: 16rem 0 0 16rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 16rem 0 0 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem 7rem 0;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+      padding: 4rem 4rem 0;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 2rem 1rem 0;
+    }
+  }
+
+  & .primary-heading {
+    @media only screen and(max-width: $bp-smallest) {
+      font-size: 4.5rem;
+      letter-spacing: -2px;
+    }
+  }
+
+  &__text {
+    width: 59%;
+    color: $color-dark-grayish-blue;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 0 6rem;
+    }
+  }
+
+  &__img {
+    padding: 18rem 14rem 0 0;
+    background-image: url("../images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: -65% 165%;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 18rem 8rem 0 0;
+      background-position: -35% 140%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 1;
+      height: 100%;
+      width: 100%;
+      padding: 18rem 0 0;
+      background-position: -60% 280%;
+      background-size: 120%;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+      background-size: 105%;
+      background-position: -220% -40%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.features {
+  align-items: start;
+
+  @media only screen and(max-width: $bp-largest) {
+    padding: 0 5rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    row-gap: 5rem;
+  }
+
+  @media only screen and(max-width: $bp-smaller) {
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and(max-width: $bp-smallest) {
+    padding: 0 2rem;
+  }
+
+  & .secondary-heading {
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+  }
+
+  & .tertiary-heading {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 140%;
+      position: absolute;
+      top: -20%;
+      left: -15%;
+      background-color: $color-very-pale-red;
+      z-index: -1;
+
+      @media only screen and (max-width: $bp-smaller) {
+        width: 124%;
+      }
+
+      @media only screen and(max-width: $bp-smallest) {
+        width: 120%;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-dark-grayish-blue;
+    width: 60%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+      width: 100%;
+      padding: 0 7rem;
+    }
+
+    @media only screen and(max-width: $bp-smaller) {
+      padding: 0 3rem;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 0 4rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    row-gap: 1.5rem;
+    column-gap: 3rem;
+
+    &__num {
+      background-color: $color-bright-red;
+      color: $color-very-light-gray;
+      padding: 0.7rem 2.6rem;
+      border-radius: 50px;
+    }
+
+    &__text {
+      color: $color-dark-grayish-blue;
+      grid-column: 2;
+      width: 96%;
+
+      @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / span 2;
+        width: 96%;
+      }
+    }
+  }
+}
+
+//TESTIMONIALS SECTION
+.testimonials {
+  display: flex;
+  gap: 2rem;
+  padding-top: 4rem;
+  overflow-x: scroll;
+  margin-bottom: 6rem;
+
+  @media only screen and(max-width: $bp-smallest) {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial {
+    background-color: $color-very-light-gray;
+    max-width: 55rem;
+    padding: 6rem 4.5rem 3.5rem;
+    text-align: center;
+    position: relative;
+
+    flex: 0 0 auto;
+
+    @media only screen and(max-width: $bp-smallest) {
+      width: 45rem;
+      padding: 7rem 6rem 4.5rem;
+    }
+
+    &__img {
+      width: 7.5rem;
+      height: 7.5rem;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__author {
+      color: $color-dark-blue;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    &__text {
+      color: $color-dark-grayish-blue;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
+
+.dots {
+  text-align: center;
+  display: none;
+
+  @media only screen and(max-width: $bp-smallest) {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    outline: 1px solid $color-bright-red;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  .dot.active {
+    background-color: $color-bright-red;
+  }
+}
+
+section:has(.testimonials) .secondary-heading {
+  text-align: center;
+}
+
+//SIMPLIFY
+.simplify {
+  position: relative;
+  background-color: $color-bright-red;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 18rem;
+  background-image: url(../images/bg-simplify-section-desktop.svg);
+  background-repeat: no-repeat;
+  background-position-x: 355%;
+  background-position-y: 100%;
+
+  @media only screen and(max-width: $bp-largest) {
+    padding: 8rem 14rem;
+    background-position-x: 50%;
+    background-position-y: 100%;
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  @media only screen and(max-width: $bp-smaller) {
+    background-position-x: 30%;
+  }
+
+  @media only screen and(max-width: $bp-smallest) {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    padding: 14rem 7rem;
+    background-position-x: 0;
+    background-position-y: 50%;
+  }
+
+  &__heading {
+    width: 44%;
+    color: $color-very-light-gray;
+    z-index: 10;
+
+    @media only screen and(max-width: $bp-medium) {
+      width: 50%;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      width: 80%;
+      text-align: center;
+    }
+
+    @media only screen and(max-width: $bp-smaller) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    background-color: $color-very-light-gray;
+    display: inline-block;
+    border-radius: 100px;
+    z-index: 10;
+  }
+
+  &__btn .btn {
+    background-color: $color-very-light-gray;
+    color: $color-bright-red;
+
+    &:hover,
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}

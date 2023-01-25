@@ -1,0 +1,75 @@
+// GLOBAL RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// img,
+// picture,
+// svg,
+// video {
+//   display: block;
+//   width: 100%;
+// }
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and(max-width:$bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: -70% 60%;
+
+  @media only screen and (max-width: $bp-largest) {
+    background-position: -90% 62%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    background-position: -150% 62%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    background-size: 60%;
+    background-position: 150% 28%;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    background-position: 150% 24%;
+  }
+
+  @media only screen and(max-width: $bp-smallest) {
+    background-position: 152% 21%;
+  }
+}
+
+.hidden {
+  display: none;
+}

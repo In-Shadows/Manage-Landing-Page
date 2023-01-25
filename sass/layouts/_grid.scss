@@ -1,0 +1,13 @@
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55.56rem, 1fr));
+  justify-items: end;
+  align-items: center;
+}
+
+.grid--2-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50.52rem, 1fr));
+  justify-items: end;
+  align-items: center;
+}
